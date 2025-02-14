@@ -22,7 +22,8 @@ nav ul {
 
 nav li { 
   position: relative; 
-  margin-right: 20px; 
+  margin-right: 70px; 
+  margin-left: 70px;
 }
 
 nav a { 
