@@ -1,6 +1,8 @@
 body {
     background-color: aqua;
     text-align: center;
+    color: blue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 nav { 
@@ -26,3 +28,16 @@ nav ul {
     margin: 0; 
     display: flex;
  }
+
+nav a { 
+    text-decoration: none; 
+    color: #333; 
+}
+
+a:hover {
+    color:aquamarine;
+    text-decoration: dashed;
+
+}
+
+
