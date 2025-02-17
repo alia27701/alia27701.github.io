@@ -39,5 +39,7 @@ a:hover {
     text-decoration: dashed;
 
 }
-
+li {
+    text-align: left;
+}
 
