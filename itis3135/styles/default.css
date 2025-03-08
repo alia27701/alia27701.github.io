@@ -38,7 +38,8 @@ nav a {
 }
 
 a:hover {
-    color:chocolate;
+    color:chocolate; 
+    
     text-decoration: dashed;
 
 }
