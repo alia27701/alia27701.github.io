@@ -18,7 +18,7 @@ header, footer, figure {
 
 
 nav { 
-    background-color: grey; 
+    background-color: aqua; 
     padding: 10px; 
     
 }
@@ -34,11 +34,11 @@ nav ul {
 
 nav a { 
     text-decoration: none; 
-    color: aqua; 
+    color: blue; 
 }
 
 a:hover {
-    color:aquamarine;
+    color:chocolate;
     text-decoration: dashed;
 
 }
