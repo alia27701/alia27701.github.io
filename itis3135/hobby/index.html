@@ -66,6 +66,30 @@
             color: #F5E5FC
         }
 
+        section {
+            display: none;
+        }
+
+        section:target {
+            display: block;
+        }
+
+        body:not:has:target {
+            display: none;
+        }
+
+        body:has:target {
+            display: blocks;
+        }
+
+        body:not:has:target nav {
+            display: block;
+        }
+
+        #what {
+            display: block;
+        }
+
 
 /* Rule Overrides For Laptops / Small Screens */
         @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
@@ -170,7 +194,39 @@
 
         <section id="ai">
             <h2>AI Prompt</h2>
+            <p>Write me code that uses html and css to be able to nagivate each section with each page and only the section that I clicked on.</p>
+            <p>Results were: 
+                section {
+                display: none;
+            }
+             || 
+            section:target {
+                display: block;
+            }
+             || 
+            body:not:has:target {
+                display: none;
+            }
+             || 
+            body:has:target {
+                display: blocks;
+            }
+             || 
+            body:not:has:target nav {
+                display: block;
+            }</p>
+
+            <p>For the code explaination: When you click a link, it hides everything else and only shows the section that you clicked the link for.</p>
+
+            <p>Write me a code using css where it makes the home page load up first.</p>
+            <p>Results were: #what {
+                display: block;
+            }</p>
+            <p>This makes it where the home page is the very first to load up when entering the website.</p>
+            <p>There was an issue where the home page kept showing up, even after another link was clicked.</p>
         </section>
+
+        
 
     </main>
     <footer>
