@@ -49,6 +49,29 @@ main {
     margin: 0 auto;
 }
 
+table {
+    border-collapse: collapse;
+    border: 1px solid #999;
+    background-color: aquamarine;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #999;
+}
+
+thead th {
+    background-color: blanchedalmond;
+}
+
+tbody tr:nth-child(odd){
+    background-color:rgb(46, 221, 163);
+}
+
+tbody tr:nth-child(even){
+    background-color: aquamarine;
+}
+
 /* Rule Overrides For Laptops / Small Screens */
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
     body {
