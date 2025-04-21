@@ -1,0 +1,91 @@
+body {
+    background-color: #e63746;
+    color: #f2faef;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    max-width: 1000px;
+	margin: 0 auto;
+	width: 80%;
+}
+h1, h2, h3, h4 {
+    font-family: "Sigmar", serif;
+    text-align: center;
+}
+
+header, footer, figure {
+    text-align: center;
+    background-color: #1d3658;
+    padding: 15px;
+    color: #a7dadc;
+
+}
+
+
+nav { 
+    background-color: #1d3658; 
+    padding: 10px; 
+    
+}
+
+
+
+nav ul { 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+ }
+
+nav a { 
+    text-decoration: none; 
+    color: #a7dadc; 
+}
+
+a:hover {
+    color:#e63746; 
+    text-decoration: dashed;
+
+}
+
+main a:hover{
+    color: #1d3658;
+}
+
+p a {
+    color: #a7dadc;
+}
+
+main {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.accordion {
+    background-color: #1d3658;
+    color: #a7dadc;
+    width: 100;
+    padding: 18px;
+    text-align: center;
+    align-self: center;
+}
+
+
+
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    body {
+        max-width: 1200px;
+    }
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    body {
+        max-width: 800px;
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    body {
+        max-width: 550px;
+    }
+}
