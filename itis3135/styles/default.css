@@ -1,24 +1,43 @@
 body {
-    background-color: aqua;
+    background-color: rgb(197, 255, 255);
     color: blue;
     font-family:Georgia, 'Times New Roman', Times, serif;
     max-width: 1000px;
 	margin: 0 auto;
 	width: 80%;
 }
-h1, h2, h3, h4 {
+h2, h3, h4 {
     font-family: "Sigmar", serif;
     text-align: center;
 }
 
-header, footer, figure {
+header, footer {
     text-align: center;
+    background-color: rgb(1, 76, 76);
+    padding: 15 px;
+    color: rgb(10, 253, 224);
 
 }
 
+figure {
+    text-align: center;
+}
 
-nav { 
-    background-color: aqua; 
+h1 {
+    color: rgb(10, 253, 224);
+    font-family: "Sigmar", serif;
+    text-align: center;
+}
+
+a {
+    color: rgb(221, 250, 221); 
+}
+
+main a {
+    color: rgb(11, 182, 11);
+}
+header, nav { 
+    background-color: rgb(1, 76, 76); 
     padding: 10px; 
     
 }
@@ -34,7 +53,7 @@ nav ul {
 
 nav a { 
     text-decoration: none; 
-    color: blue; 
+    color: rgb(221, 250, 221); 
 }
 
 a:hover {
