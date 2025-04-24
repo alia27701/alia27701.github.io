@@ -1,14 +1,21 @@
 body {
-    background-color: #e63746;
-    color: #f2faef;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: #5d0e14;
+    color: rgb(253, 253, 235);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     max-width: 1000px;
 	margin: 0 auto;
 	width: 80%;
 }
-h1, h2, h3, h4 {
-    font-family: "Sigmar", serif;
+h2, h3, h4 {
+    font-family: georgia", serif;";
     text-align: center;
+    font-size: 4vh;
+}
+
+h1 {
+    font-family: georgia", serif;";
+    text-align: center;
+    font-size: 5vh;
 }
 
 header, footer, figure {
@@ -19,6 +26,17 @@ header, footer, figure {
 
 }
 
+main ul {
+    text-align: left;
+}
+
+main {
+    text-align: center;
+}
+
+main p {
+    text-align: left;
+}
 
 nav { 
     background-color: #1d3658; 
