@@ -28,9 +28,7 @@
         </div>
         <hr>
         <h3>Where to Get Your Scrum Certifications:</h3>
-        <div class = "accordion_div">
-            <button class="accordion">Scrum Certificates</button>
-        </div>
+        <button class="accordion">Scrum Certificates</button>
         <div class="panel">
             <p><a href="https://www.scrum.org/assessments/professional-scrum-master-i-certification">Professional Scrum Master I Certification</a></p>
             <p><a href="https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster">Certified ScrumMaster Course</a></p>
@@ -43,5 +41,19 @@
         <div data-include="../components/footer_too.html"></div>
     </footer>
     <script src="../scripts/HTMLinclude.min.js"></script>
+    <script>
+        var show = document.getElementsByClassName("accordion");
+        for (let i = 0; i < show.length; i++) {
+            show[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var seeking = this.nextElementSibling;
+                if (seeking.style.display === "block") {
+                    seeking.style.display = "none";
+                } else {
+                    seeking.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>

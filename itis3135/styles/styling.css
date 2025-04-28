@@ -85,6 +85,14 @@ main {
     padding: 18px;
     text-align: center;
     align-self: center;
+    margin-bottom: 10px;
+}
+
+.panel {
+    padding: 0 10px;
+    overflow: hidden;
+    display: none;
+
 }
 
 

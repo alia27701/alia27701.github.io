@@ -17,7 +17,6 @@
     <main>
         <h2>Daily Practices & Scrum Ceremonies</h2>
         <p>In this page, Dan introduces the topic of a Scrum event and the different kinds of Scrum meetings.</p>
-        <hr>
         <h3>Scrum Ceremonies:</h3>
         <button class="accordion">Daily Standup</button>
         <div class="panel">
@@ -48,5 +47,19 @@
         <div data-include="../components/footer_too.html"></div>
     </footer>
     <script src="../scripts/HTMLinclude.min.js"></script>
+    <script>
+        var show = document.getElementsByClassName("accordion");
+        for (let i = 0; i < show.length; i++) {
+            show[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var seeking = this.nextElementSibling;
+                if (seeking.style.display === "block") {
+                    seeking.style.display = "none";
+                } else {
+                    seeking.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
