@@ -9,6 +9,25 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styling.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script>
+   (function(){
+      emailjs.init("KOfhzHjeA_NP4-py_");
+   })();
+    </script>
+    <script>
+        function sendMail(){
+            let parms = {
+                name : document.getElementById("name").value,
+                mail : document.getElementById("mail").value,
+                subject : document.getElementById("subject").value,
+                question : document.getElementById("question").value
+            };
+
+            emailjs.send("DanScrumMaster","template_plvzhnv", parms).then(alert("Email Sent"));
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -36,6 +55,20 @@
         </div>
         <hr>
         <h3>Email Form</h3>
+        <p style="text-align: center;">Fill out the form to send your questions to Dan</p>
+        <form id="questionform">
+            <p style="text-align: center;">Name:</p>
+            <br><input type="text" id="name" name="name"><br>
+            <p style="text-align: center;">Email Address:</p>
+            <br><input type="email" id="mail" name="mail"><br>
+            <p style="text-align: center;">Subject:</p>
+            <br><input type="text" id="subject" name="subject"><br>
+            <p style="text-align: center;">Question/Comment:</p>
+            <input type="text" id="question" name="question" size="75"><br><br>
+            <button type="submit" onclick="sendMail()">Send Email</button>
+            <button type="reset">Reset Email</button>
+        </form>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     </main>
     <footer>
         <div data-include="../components/footer_too.html"></div>
