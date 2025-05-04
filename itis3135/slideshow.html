@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Alimi's Ambitious Alligator ~ ITIS3135 ~ SlideShow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>SlideShow</h2>
+        <div class="slide">
+            <div class="useSlides">
+                <div class="numberText">1 / 8</div>
+                <img src="images/airpods.jpeg" alt="airpods" style="width:100%">
+            </div>
+
+            <div class="useSlides">
+                <div class="numberText">2 / 8</div>
+                <img src="images/lake.jpg" alt="lake" style="width:100%">
+            </div>
+
+            <div class="useSlides">
+                <div class="numberText">3 / 8</div>
+                <img src="images/iphone.jpeg" alt="iphone" style="width:100%">
+            </div>
+
+            <div class="useSlides">
+                <div class="numberText">4 / 8</div>
+                <img src="images/apple.jpg" alt="apple" style="width:100%">
+            </div>
+
+            <div class="useSlides">
+                <div class="numberText">5 / 8</div>
+                <img src="images/lysol.jpg" alt="lysol" style="width:100%">
+            </div>
+
+            <div class="useSlides">
+                <div class="numberText">6 / 8</div>
+                <img src="images/icecream.jpeg" alt="icecream" style="width:100%">
+            </div>
+
+            <div class="useSlides">
+                <div class="numberText">7 / 8</div>
+                <img src="images/medicine.jpeg" alt="medicine" style="width:100%">
+            </div>
+
+            <div class="useSlides">
+                <div class="numberText">8 / 8</div>
+                <img src="images/insect_spray.jpeg" alt="insect_spray" style="width:100%">
+            </div>
+
+            <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="front" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="captions">
+                <p id="caption"></p>
+            </div>
+        </div>
+        <p>I wanna thank my house and apartment for having all of these items. I also want to thank the cafeteria for providing the apple.</p>
+        <p>A challenge I had was trying to do this assignment while I had other assignments in class to do. I also struggled finding three items that started with I.</p>
+        <p>This is all my work and I never copied anyone else's code. - AA</p>
+        <p>Signed, Ali Alimi, 5/3/2025 10:21am</p>
+        <script>
+            let indexing = 1;
+            showing(indexing);
+
+            function plusSlides(n) {
+                showing(indexing += n);
+            }
+
+            function showing(n) {
+                let pics;
+                let slideshowable = document.getElementsByClassName("useSlides");
+                let captionText = document.getElementById("caption");
+                if (n > slideshowable.length) {indexing = 1}
+                if (n < 1) {indexing = slides.length}
+                for (pics = 0; pics < slides.length; i++) {
+                    slides[pics].style.display = "none"
+                }
+            }
+
+
+        </script>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLinclude.min.js"></script>
+</body>
+</html>

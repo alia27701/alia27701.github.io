@@ -91,6 +91,19 @@ tbody tr:nth-child(even){
     background-color: aquamarine;
 }
 
+.slides {
+    position: relative;
+}
+
+.useSlides {
+    display: none;
+  }
+
+  .back:hover,
+.front:hover {
+  background-color: rgba(152, 21, 21, 0.8);
+}
+
 /* Rule Overrides For Laptops / Small Screens */
 @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
     body {
