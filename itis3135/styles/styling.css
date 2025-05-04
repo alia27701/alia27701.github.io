@@ -7,13 +7,13 @@ body {
 	width: 80%;
 }
 h2, h3, h4 {
-    font-family: georgia", serif;";
+    font-family: Georgia, serif;
     text-align: center;
     font-size: 4vh;
 }
 
 h1 {
-    font-family: georgia", serif;";
+    font-family: Georgia, serif;
     text-align: center;
     font-size: 5vh;
 }
@@ -81,7 +81,6 @@ main {
 .accordion {
     background-color: #1d3658;
     color: #a7dadc;
-    width: 100;
     padding: 18px;
     text-align: center;
     align-self: center;
