@@ -12,6 +12,7 @@
 </head>
 <body>
     <header>
+        <!--Inserts the header from the components folder-->
         <div data-include="../components/header_too.html"></div>
     </header>
     <main>
@@ -44,22 +45,13 @@
         <hr>
     </main>
     <footer>
+        <!--Inserts the footer from the components folder-->
         <div data-include="../components/footer_too.html"></div>
     </footer>
     <script src="../scripts/HTMLinclude.min.js"></script>
-    <script>
-        var show = document.getElementsByClassName("accordion");
-        for (let i = 0; i < show.length; i++) {
-            show[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var seeking = this.nextElementSibling;
-                if (seeking.style.display === "block") {
-                    seeking.style.display = "none";
-                } else {
-                    seeking.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <!--This makes the accordion be clickable and reveal the information-->
+    <!--Inspired by w3schools tutorial on how to create a proper accordion-->
+    <!--link: https://www.w3schools.com/howto/howto_js_accordion.asp-->
+    <script src="../scripts/accordion.js"></script>
 </body>
 </html>

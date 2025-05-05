@@ -9,29 +9,20 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styling.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
    (function(){
-      emailjs.init("KOfhzHjeA_NP4-py_");
+      emailjs.init({
+        publicKey: "9pu9JSvTRTlDo8z6C"
+      });
    })();
-    </script>
-    <script>
-        function sendMail(){
-            event.preventDefault();
-            let parms = {
-                name : document.getElementById("name").value,
-                email : document.getElementById("email").value,
-                subject : document.getElementById("subject").value,
-                question : document.getElementById("question").value
-            };
-
-            emailjs.send("DanScrumMaster","template_plvzhnv", parms).then(alert("Email Sent"));
-        }
-    </script>
+</script>
 </head>
 <body>
     <header>
+        <!--Inserts the header from the components folder-->
         <div data-include="../components/header_too.html"></div>
     </header>
     <main>
@@ -57,37 +48,30 @@
         <hr>
         <h3>Email Form</h3>
         <p style="text-align: center;">Fill out the form to send your questions to Dan</p>
-        <form id="questionform" onsubmit="sendMail(event)">
+        <form id="contact-form">
             <p style="text-align: center;">Name:</p>
-            <br><input type="text" id="name" name="name"><br>
+            <br><input type="text" id="name" name="name" required><br>
             <p style="text-align: center;">Email Address:</p>
-            <br><input type="email" id="email" name="email"><br>
+            <br><input type="email" id="email" name="email" required><br>
             <p style="text-align: center;">Subject:</p>
-            <br><input type="text" id="subject" name="subject"><br>
+            <br><input type="text" id="subject" name="subject" required><br>
             <p style="text-align: center;">Question/Comment:</p>
-            <input type="text" id="question" name="question" size="75"><br><br>
-            <button type="submit">Send Email</button>
+            <br><input type="text" id="question" name="question" size="75" required><br>
+            <button type="submit" class="btn" onclick="sendEmail()">Send Email</button>
             <button type="reset">Reset Email</button>
         </form>
         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     </main>
     <footer>
+        <!--Inserts the footer from the components folder-->
         <div data-include="../components/footer_too.html"></div>
     </footer>
     <script src="../scripts/HTMLinclude.min.js"></script>
-    <script>
-        var show = document.getElementsByClassName("accordion");
-        for (let i = 0; i < show.length; i++) {
-            show[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var seeking = this.nextElementSibling;
-                if (seeking.style.display === "block") {
-                    seeking.style.display = "none";
-                } else {
-                    seeking.style.display = "block";
-                }
-            });
-        }
-    </script>
+    <!--This makes the accordion be clickable and reveal the information-->
+    <!--Inspired by w3schools tutorial on how to create a proper accordion-->
+    <!--link: https://www.w3schools.com/howto/howto_js_accordion.asp-->
+    <script src="../scripts/accordion.js"></script>
+    <!--This inserts the script of the emailjs function that allows emails to be sent directly from the form-->
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
