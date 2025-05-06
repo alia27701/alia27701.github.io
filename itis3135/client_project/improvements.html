@@ -9,19 +9,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/styling.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script
-        src="https://cdn.emailjs.com/dist/email.min.js">
-    </script>
-    <script>
-    window.onload = function(){
-    emailjs.init({
-        publicKey: 'HESM3A1NVAtrY3usT'
-    });
-};
-    </script>
-<!--This inserts the script of the emailjs function that allows emails to be sent directly from the form-->
-<!--link for idea: https://www.youtube.com/watch?v=lRFh7Ep35lc-->
-    <script src="../scripts/script.js"></script>
 </head>
 <body>
     <header>
@@ -49,30 +36,21 @@
             <p><a href="https://www.scrum.org/open-assessments">Open Assessments</a></p>
         </div>
         <hr>
-        <section id="contact" class="container">
+        <section>
             <h3>Email Form</h3>
-        <p style="text-align: center;">Fill out the form to send your questions to Dan</p>
-            <form onsubmit="sendMail(event)">
-                <div class="group-of-form">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" required>
-                </div>
-                <div class="group-of-form">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="group-of-form">
-                    <label for="subject">Subject</label>
-                    <input id="subject" name="subject" required>
-                </div>
-                <div class="group-of-form">
-                    <label for="message">Write Your Message:</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send it!</button>
-                <button type="reset">Reset Email</button>
-            </form>
-            
+            <p style="text-align: center;">Fill out the form to send your questions to Dan</p>
+            <form id="contact-form">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required /><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required /><br>
+                <label for="subject">Subject</label><br>
+                <input id="subject" name="subject" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br>
+                <button type="submit" id ="submit">Send Message</button>
+                <button type="reset" id ="reset">Reset Message</button>
+              </form>
         </section>
         
     </main>
@@ -85,5 +63,8 @@
     <!--Inspired by w3schools tutorial on how to create a proper accordion-->
     <!--link: https://www.w3schools.com/howto/howto_js_accordion.asp-->
     <script src="../scripts/accordion.js"></script>
+    <!--The js below this note allows the action and method to be posted dynamically-->
+    <!--link for the source of how to do this: https://formsubmit.co/-->
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
