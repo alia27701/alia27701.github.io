@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="../styles/styling.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script>
-   (function(){
-      emailjs.init({
-        publicKey: "9pu9JSvTRTlDo8z6C"
-      });
-   })();
-</script>
+        src="https://cdn.emailjs.com/dist/email.min.js">
+    </script>
+    <script>
+    window.onload = function(){
+    emailjs.init({
+        publicKey: 'HESM3A1NVAtrY3usT'
+    });
+};
+    </script>
+<!--This inserts the script of the emailjs function that allows emails to be sent directly from the form-->
+<!--link for idea: https://www.youtube.com/watch?v=lRFh7Ep35lc-->
+    <script src="../scripts/script.js"></script>
 </head>
 <body>
     <header>
@@ -46,21 +49,32 @@
             <p><a href="https://www.scrum.org/open-assessments">Open Assessments</a></p>
         </div>
         <hr>
-        <h3>Email Form</h3>
+        <section id="contact" class="container">
+            <h3>Email Form</h3>
         <p style="text-align: center;">Fill out the form to send your questions to Dan</p>
-        <form id="contact-form">
-            <p style="text-align: center;">Name:</p>
-            <br><input type="text" id="name" name="name" required><br>
-            <p style="text-align: center;">Email Address:</p>
-            <br><input type="email" id="email" name="email" required><br>
-            <p style="text-align: center;">Subject:</p>
-            <br><input type="text" id="subject" name="subject" required><br>
-            <p style="text-align: center;">Question/Comment:</p>
-            <br><input type="text" id="question" name="question" size="75" required><br>
-            <button type="submit" class="btn" onclick="sendEmail()">Send Email</button>
-            <button type="reset">Reset Email</button>
-        </form>
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <form onsubmit="sendMail(event)">
+                <div class="group-of-form">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" required>
+                </div>
+                <div class="group-of-form">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="group-of-form">
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" required>
+                </div>
+                <div class="group-of-form">
+                    <label for="message">Write Your Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send it!</button>
+                <button type="reset">Reset Email</button>
+            </form>
+            
+        </section>
+        
     </main>
     <footer>
         <!--Inserts the footer from the components folder-->
@@ -71,8 +85,5 @@
     <!--Inspired by w3schools tutorial on how to create a proper accordion-->
     <!--link: https://www.w3schools.com/howto/howto_js_accordion.asp-->
     <script src="../scripts/accordion.js"></script>
-    <!--This inserts the script of the emailjs function that allows emails to be sent directly from the form-->
-    <!--link for idea: https://www.youtube.com/watch?v=lRFh7Ep35lc-->
-    <script src="../scripts/script.js"></script>
 </body>
 </html>
