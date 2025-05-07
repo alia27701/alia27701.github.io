@@ -52,8 +52,9 @@ nav ul {
  }
 
 nav a { 
-    text-decoration: none; 
-    color: rgb(221, 250, 221); 
+    text-decoration: underline; 
+    color: rgb(221, 250, 221);
+     
 }
 
 a:hover {
