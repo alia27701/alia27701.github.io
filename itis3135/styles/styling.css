@@ -54,7 +54,7 @@ nav ul {
  }
 
 nav a { 
-    text-decoration: none; 
+    text-decoration: underline; 
     color: #a7dadc; 
 }
 
